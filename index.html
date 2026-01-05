@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI-Powered Property Risk Scanner</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="hero">
+        <p class="badge">Tamil Nadu Edition</p>
+        <h1>AI-Powered Property Risk Scanner</h1>
+        <p class="subtitle">
+          Upload Patta, EC, or property documents to get a bank-style risk verdict in
+          under a minute.
+        </p>
+      </header>
+
+      <main>
+        <section class="card">
+          <h2>1) Upload documents</h2>
+          <p class="helper">
+            Accepted: PDF, PNG, JPG. You can upload multiple files. Max 10 MB each.
+          </p>
+          <div class="uploader">
+            <input
+              id="file-input"
+              type="file"
+              accept="application/pdf,image/*"
+              multiple
+            />
+            <label for="file-input" class="button">Choose files</label>
+            <span id="file-count">No files selected</span>
+          </div>
+          <div id="preview" class="preview"></div>
+        </section>
+
+        <section class="card">
+          <h2>2) Add notes (optional)</h2>
+          <textarea
+            id="user-notes"
+            rows="4"
+            placeholder="E.g., This plot is in Coimbatore; seller says no pending case. Please explain results in simple Tamil + English."
+          ></textarea>
+        </section>
+
+        <section class="card">
+          <h2>3) Get your risk report</h2>
+          <p class="helper">
+            The report uses Titan rules: appeal traps, EC currency, and risky land
+            classifications (Nanjai/Gramanatham/Panchami).
+          </p>
+          <button id="analyze-btn" class="button primary">Analyze documents</button>
+          <p id="status" class="status">Waiting for documents.</p>
+        </section>
+
+        <section class="card">
+          <h2>Results</h2>
+          <div class="results">
+            <div class="score">
+              <span>Risk Score</span>
+              <strong id="risk-score">—</strong>
+            </div>
+            <div class="traffic">
+              <span>Bank Verdict</span>
+              <strong id="bank-verdict">—</strong>
+              <p id="verdict-reason" class="muted">
+                Upload documents to see a tailored verdict.
+              </p>
+            </div>
+          </div>
+          <div class="action-plan">
+            <h3>Action Plan (WhatsApp-ready)</h3>
+            <textarea id="action-plan" rows="6" readonly>
+Upload documents to generate a polite, bilingual message you can send to the seller.
+            </textarea>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>
+          Powered by Titan logic. This UI is a simple wrapper for your OCR + GPT
+          pipeline.
+        </p>
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
