@@ -1,0 +1,181 @@
+:root {
+  color-scheme: light;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: #f6f7fb;
+  color: #0b1320;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #fff3c7;
+  color: #6a4b00;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: clamp(1.75rem, 3vw, 2.4rem);
+}
+
+.subtitle {
+  margin: 0 auto;
+  max-width: 680px;
+  color: #4b5565;
+}
+
+main {
+  display: grid;
+  gap: 20px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.helper {
+  color: #5b6475;
+  margin-top: 8px;
+}
+
+.uploader {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-top: 16px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid #c6d0f0;
+  background: #eef2ff;
+  color: #1f2a58;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.button.primary {
+  background: #1c46f2;
+  color: #ffffff;
+  border-color: transparent;
+  width: 100%;
+}
+
+.button.primary:disabled {
+  background: #94a3ff;
+  cursor: not-allowed;
+}
+
+.preview {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.preview-item {
+  background: #f7f8fc;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #334155;
+}
+
+textarea {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #d6dcec;
+  padding: 12px;
+  font-size: 0.95rem;
+  resize: vertical;
+}
+
+.status {
+  margin-top: 12px;
+  font-weight: 600;
+  color: #1d4ed8;
+}
+
+.results {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 12px;
+}
+
+.score,
+.traffic {
+  background: #f8f9ff;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.score strong,
+.traffic strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 1.5rem;
+}
+
+.muted {
+  color: #62708a;
+  margin-top: 6px;
+}
+
+.action-plan {
+  margin-top: 16px;
+}
+
+footer {
+  text-align: center;
+  color: #64748b;
+  font-size: 0.85rem;
+  margin-top: 24px;
+}
+
+@media (max-width: 640px) {
+  .app {
+    padding: 16px;
+  }
+
+  .button.primary {
+    font-size: 1rem;
+  }
+}
